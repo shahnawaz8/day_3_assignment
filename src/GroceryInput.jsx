@@ -1,5 +1,5 @@
 import { useState } from "react"
-export const GroceryInput = ({addItem})=>{
+export const GroceryInput = ({addItems})=>{
     const [text,setText] = useState("");
     return (
         <div>
@@ -7,8 +7,9 @@ export const GroceryInput = ({addItem})=>{
                 setText(e.target.value);
                 
             }}/>
-            <button onClick={(handleAdd)=>{
-                handleAdd(text);
+            <button onClick={()=>{
+
+                addItems(text)
             }}>
                 Add Item
             </button>
